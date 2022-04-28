@@ -558,12 +558,14 @@ function checkForSwipe(e) {
         let dir = xDistance < 0 ? "left" : "right";
         console.log(dir);
         console.log(startX, startY);
+        alert(dir);
         // console.log(e.clientX, e.clientY);
       } else {
         //вертикальное перемещение
         let dir = yDistance > 0 ? "up" : "down";
         console.log(dir);
         console.log(startX, startY);
+        alert(dir);
         // console.log(e.clientX, e.clientY);
       }
     }
