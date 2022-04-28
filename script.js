@@ -543,35 +543,29 @@ function StartStop() {
 //////////////////////---TIMER-END---//////////////////////////////////
 
 function checkForSwipe(e) {
-
   let startX = e.clientX;
   let startY = e.clientY;
+  console.log(startX, startY);
+
   document.addEventListener("pointermove", (e) => {
     xDistance = e.clientX - startX;
     yDistance = e.clientY - startY;
     // console.log(e.clientY);
     // console.log(e.clientX);
-    if (xDistance >= 40) {
-      startX = 0;
-      startY = 0;
-      swipeDirection = "right";
-      alert(swipeDirection);
-  
-    } else if (xDistance <= -40) {
-      startX = 0;
-      startY = 0;
-      swipeDirection = "left";
-      alert(swipeDirection);
-    } else if (yDistance >= 40) {
-      startX = 0;
-      startY = 0;
-      swipeDirection = "down";
-      alert(swipeDirection);
-    } else if (yDistance <= -40) {
-      startX = 0;
-      startY = 0;
-      swipeDirection = "up";
-      alert(swipeDirection);
+    if (Math.abs(xDistance || yDistance) > 60) {
+      if (Math.abs(xDistance) > Math.abs(yDistance)) {
+        //горизонтальное перемещение
+        let dir = xDistance < 0 ? "left" : "right";
+        console.log(dir);
+        console.log(startX, startY);
+        // console.log(e.clientX, e.clientY);
+      } else {
+        //вертикальное перемещение
+        let dir = yDistance > 0 ? "up" : "down";
+        console.log(dir);
+        console.log(startX, startY);
+        // console.log(e.clientX, e.clientY);
+      }
     }
   });
   // swipeDirection && console.log(swipeDirection);
