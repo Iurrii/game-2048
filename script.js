@@ -16,7 +16,7 @@ let isTimerActive = false;
 //DOM-variables
 const gameField = document.querySelector(".JS-game-field");
 const displayCounter = document.getElementById("score-game");
-const elem = document;
+const elem = document.querySelector(".JS-game-field");
 const displayTimer = document.getElementById("timer-game");
 const displayTableOfResults = document.getElementById("table-of-results");
 
@@ -30,7 +30,6 @@ let cellWidth = () => {
 window.onload = () => {
   initializeGridModel(numRows, numCols, gridModel);
   createGameGrid(gameField, numRows, numCols, gap);
-  // document.addEventListener("pointerdown", (e) => checkForSwipe(e));
   document.addEventListener("keydown", controlKeydown);
 };
 
