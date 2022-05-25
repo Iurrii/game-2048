@@ -13,8 +13,18 @@
 
 body {
   background-color: #000;
-  padding-top: 5vh;
-  max-height: 100vh;
+  padding: 5vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
 }
 
 .container {
@@ -100,6 +110,19 @@ body {
   font-size: 16px;
   color: #fff;
   text-shadow: 0 0 1px #009999, 0 0 2px #009999, 0 0 5px #009999, 0 0 11px #009999, 0 0 20px #009999;
+}
+
+.footer {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0 1px #009999, 0 0 2px #009999, 0 0 5px #009999, 0 0 11px #009999, 0 0 20px #009999;
+}
+
+.footer__text {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .dynamic-style-2 {

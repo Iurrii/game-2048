@@ -10,9 +10,11 @@
 
 body {
   background-color: #000;
-  padding-top: 5vh;
-  max-height: 100vh;
-  // overflow: hidden;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .container {
@@ -56,7 +58,7 @@ body {
 
   &__cell {
     position: absolute;
-    //za-razmery-yacheyki-otvechaet-JS-peremennaya-cellWidth
+    //the-cell-size-is-determined-by-the-JS-variable-cellWidth
     font-size: 45px;
     background-color: #071204;
     display: flex;
@@ -65,7 +67,7 @@ body {
     align-items: center;
     color: #fff;
     transition: all 0.15s;
-    //не работает адекватно letter-spacing
+    //does-not-work-correctly-letter-spacing
   }
 }
 
@@ -87,6 +89,21 @@ body {
       0 0 20px #009999;
 
   }
+}
+
+.footer {
+  font-size: 16px;
+  color: #fff;
+  text-shadow:
+    0 0 1px #009999,
+    0 0 2px #009999,
+    0 0 5px #009999,
+    0 0 11px #009999,
+    0 0 20px #009999;
+    &__text {
+      display:block;
+      width: fit-content;
+    }
 }
 
 .dynamic-style-2 {

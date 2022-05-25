@@ -20,7 +20,7 @@ const elem = document.querySelector(".JS-game-field");
 const displayTimer = document.getElementById("timer-game");
 const displayTableOfResults = document.getElementById("table-of-results");
 
-//shirina-yacheyki-zavisit-ot-shiriny-oblasti-prosmotra
+//the width of the cell depends on the width of the viewport
 let cellWidth = () => {
   if (window.innerWidth >= 1200) return 110;
   if (window.innerWidth >= 768) return 70;
@@ -136,7 +136,7 @@ function collapseUp(cols, rows, grid) {
           grid[row][col] = "";
           grid[cellIterator][col] = currentValue * 2;
           finalTop = cellIterator * cellWidth() + gap;
-          //счётчик очков
+          //score counter
           score += currentValue * 2;
           showADisplay(displayCounter, score);
           ///
@@ -190,7 +190,7 @@ function collapseDown(cols, rows, grid) {
           grid[cellIterator][col] = currentValue * 2;
           finalTop = cellIterator * (cellWidth() + gap * 2) + gap;
 
-          //счётчик очков
+          //score counter
           score += currentValue * 2;
           showADisplay(displayCounter, score);
           ///
@@ -243,7 +243,7 @@ function collapseRight(rows, cols, grid) {
           grid[row][col] = "";
           grid[row][cellIterator] = currentValue * 2;
           finalLeft = cellIterator * (cellWidth() + gap * 2) + gap;
-          //счётчик очков
+          //score counter
           score += currentValue * 2;
           showADisplay(displayCounter, score);
           ///
@@ -296,7 +296,7 @@ function collapseLeft(rows, cols, grid) {
           grid[row][col] = "";
           grid[row][cellIterator] = currentValue * 2;
           finalLeft = cellIterator * (cellWidth() + gap * 2) + gap;
-          //счётчик очков
+          //score counter
           score += currentValue * 2;
           showADisplay(displayCounter, score);
           ///
@@ -390,7 +390,7 @@ function addDynamicStyles(value, item) {
   if (Number.isInteger(value)) {
     //reset-dynamics-styles
     item.classList.remove(!`dynamic-style-${value}`);
-    //dobavlyaem-novyy-dinamicheskiy-stil
+    //add-new-dynamic-style
     item.classList.add(`dynamic-style-${value}`);
   }
 }
@@ -440,7 +440,7 @@ function canCollapseWithNeighbor(row, col, grid, rows, cols) {
 }
 
 function gameWin() {
-  //GAME-IS-WON
+  //GAME-IS-WIN
   alert(`Вы выиграли! ${score}`);
   isVictory = true;
   dataForTableResults(readout, score, gameResults);
@@ -487,7 +487,7 @@ let h = 1,
   ms = 0;
 init = 0;
 
-//функция для очистки поля
+//clear-timer
 function ClearСlock() {
   clearTimeout(clocktimer);
   h = 1;
